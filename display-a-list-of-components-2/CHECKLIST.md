@@ -1,0 +1,4 @@
+- You render 12 movie item components on the screen.
+- The first 9 movies are "Harry Potter" movies and the last three are "Fantastic Beasts" movies.
+- "The last movie is titled \"Fantastic Beasts: The Secrets of Dumbledore\""
+- "The last movie has the following details displayed: \"Release date: 2022-04-08  Budget: $ 200 million  Duration: 142 min\""
