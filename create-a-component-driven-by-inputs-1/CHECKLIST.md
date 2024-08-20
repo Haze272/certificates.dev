@@ -1,0 +1,4 @@
+- You render a movie item component that displays movie info from "Harry Potter and the Philosopher's Stone"
+- The release date is displayed as 2001-11-04
+- The budget is displayed as "$ 125 million"
+- The duration is displayed as "152 min"
