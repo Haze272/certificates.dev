@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, input} from '@angular/core';
 import {Movie} from "../model/movie.model";
 
 
@@ -7,11 +7,11 @@ import {Movie} from "../model/movie.model";
   template: `
     <div class="movie-item">
       <div>
-        <h4>{{ movie.title }}</h4>
+        <h4>{{ movie().title }}</h4>
         <small class="subtitle">
-          <span>Release date: {{ movie.release_date }}</span>
-          <span>Budget: $ {{ movie.budget }} million</span>
-          <span>Duration: {{ movie.release_date }} min</span>
+          <span>Release date: {{ movie().release_date }}</span>
+          <span>Budget: $ {{ movie().budget }} million</span>
+          <span>Duration: {{ movie().release_date }} min</span>
         </small>
       </div>
       <button>Details</button>
@@ -21,6 +21,6 @@ import {Movie} from "../model/movie.model";
   styleUrls: [ 'movie-item.component.scss' ]
 })
 export class MovieItemComponent {
-  @Input({required: true}) movie: Movie;
+  movie = input.required<Movie>();
 }
 
