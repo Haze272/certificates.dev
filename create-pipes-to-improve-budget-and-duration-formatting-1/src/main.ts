@@ -95,7 +95,7 @@ const handlers = [
       "ffa6d8a5-4054-46ca-b8e6-9945283c8f18": {
         "id": "ffa6d8a5-4054-46ca-b8e6-9945283c8f18",
         "title": "Harry Potter and the Deathly Hallows – Part 2",
-        "duration": "130",
+        "duration": "",
         "budget": "250",
         "release_date": "2011-07-07",
         "box_office": "1,342",
@@ -167,8 +167,8 @@ const handlers = [
       }, {
         "id": "cae233c5-6b08-4201-a665-194110d9c889",
         "title": "Harry Potter and the Goblet of Fire",
-        "duration": "157",
-        "budget": "150",
+        "duration": null,
+        "budget": null,
         "release_date": "2005-11-06"
       }, {
         "id": "d8a28625-0704-45fe-9be5-cd795eb1b8f4",
