@@ -1,0 +1,4 @@
+- You render 12 movie item components on the screen.
+- Move your mouse cursor over the first movie in the list. Its background color becomes `gold`
+- Move your mouse cursor over the second movie in the list. Its background color becomes `gold`. The background color fo the first movie is back to what it was before.
+- Try hovering several movies one after the other and ensure that only one movie at a time has a `gold` background color.
