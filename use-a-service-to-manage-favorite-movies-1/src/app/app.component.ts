@@ -15,19 +15,7 @@ import {FavoritesService} from "./services/favorites.service";
   ]
 })
 export class AppComponent {
-  private readonly favoritesService = inject(FavoritesService);
+  protected readonly favoritesService = inject(FavoritesService);
 
   protected movies: Signal<Movie[]> = inject(MoviesService).getMovies();
-
-  isFavorite(id: string) {
-    return this.favoritesService.favoriteMovies.has(id);
-  }
-
-  toggleFavorite(id: string) {
-    if (this.isFavorite(id)) {
-      this.favoritesService.removeFromFavorites(id);
-    } else {
-      this.favoritesService.addToFavorites(id);
-    }
-  }
 }

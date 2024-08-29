@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {computed, Injectable, Signal, signal} from '@angular/core';
 import {Movie} from "../model/movie.model";
 
 
@@ -6,13 +6,19 @@ import {Movie} from "../model/movie.model";
   providedIn: 'root'
 })
 export class FavoritesService {
-  favoriteMovies: Set<string> = new Set<string>();
+  private favorites = signal<Movie[]>([]);
 
-  addToFavorites(id: string) {
-    this.favoriteMovies.add(id);
+  toggleFavorite(movie: Movie): void {
+    let index = this.favorites().findIndex((m) => m.id === movie.id);
+    if (index == -1) {
+      this.favorites.set([...this.favorites(), movie]);
+    } else {
+      this.favorites().splice(index, 1);
+      this.favorites.set(this.favorites());
+    }
   }
 
-  removeFromFavorites(id: string) {
-    this.favoriteMovies.delete(id);
+  isFavorite(movie: Movie): Signal<boolean> {
+    return computed(() => (this.favorites().find((m) => m.id === movie.id) != null));
   }
 }

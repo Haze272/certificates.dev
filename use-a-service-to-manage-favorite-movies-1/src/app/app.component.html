@@ -3,8 +3,8 @@
     <app-movie-item
         [movie]="movie"
         appHighlight
-        [isFavorite]="isFavorite(movie.id)"
-        (onFavoriteClicked)="toggleFavorite(movie.id)"
+        [isFavorite]="favoritesService.isFavorite(movie)()"
+        (onFavoriteClicked)="favoritesService.toggleFavorite(movie)"
     />
   }
 </div>
