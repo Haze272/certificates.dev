@@ -12,7 +12,6 @@ import {FavoritesService} from "../services/favorites.service";
   imports: [
     HighlightDirective,
     MovieItemComponent
-
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
