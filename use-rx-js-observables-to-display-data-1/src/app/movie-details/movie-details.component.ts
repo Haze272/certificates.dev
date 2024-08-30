@@ -38,7 +38,7 @@ import {MoviesService} from '../services/movies.service';
         <td data-label="Budget">{{ movie?.budget | millionDollar }}</td>
         <td data-label="Duration">{{ movie?.duration | minToDuration }}</td>
         <td data-label="Producers">{{ movie?.producers?.join(', ') }}</td>
-        <td data-label="Cinematographers">{{ movie?.cinematographers ?? movie?.cinematographers?.join(', ') }}</td>
+        <td data-label="Cinematographers">{{ movie?.cinematographers?.join(', ') }}</td>
       </tr>
       </tbody>
     </table>

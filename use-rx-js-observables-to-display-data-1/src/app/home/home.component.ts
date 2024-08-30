@@ -19,6 +19,6 @@ import {AsyncPipe} from "@angular/common";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  protected movies: Observable<Movie[]> = inject(MoviesService).getMovies();
+  protected movies$: Observable<Movie[]> = inject(MoviesService).getMovies();
   protected favoritesService = inject(FavoritesService);
 }
