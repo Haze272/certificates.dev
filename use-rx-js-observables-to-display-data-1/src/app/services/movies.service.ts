@@ -1,4 +1,4 @@
-import {inject, Injectable, Signal} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Movie, MovieDetails} from '../model/movie.model';
 import {Observable} from 'rxjs';
