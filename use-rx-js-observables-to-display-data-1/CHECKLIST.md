@@ -1,0 +1,4 @@
+- The `movies.service` returns an Observable instead of a Signal
+- When the app loads, all movies are displayed 
+- Clicking on the details button of "Harry Potter and the Prisoner of Azkaban" displays a view of movie details including a summary, cover image for the movie, and more.
+- Using the browser "back" button brings you back to the list of all movies.
