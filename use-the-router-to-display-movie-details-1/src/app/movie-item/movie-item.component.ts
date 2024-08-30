@@ -2,6 +2,7 @@ import {Component, input, output} from '@angular/core';
 import { Movie } from '../model/movie.model';
 import {MillionDollarPipe} from '../pipes/million-dollar.pipe';
 import {MinToDurationPipe} from '../pipes/min-to-duration.pipe';
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-movie-item',
@@ -19,13 +20,14 @@ import {MinToDurationPipe} from '../pipes/min-to-duration.pipe';
         </small>
       </div>
 
-      <button>Details</button>
+      <button [routerLink]="['/details', movie().id]">Details1</button>
     </div>
   `,
   standalone: true,
   imports: [
     MillionDollarPipe,
-    MinToDurationPipe
+    MinToDurationPipe,
+    RouterLink
   ],
   styleUrls: ['movie-item.component.scss']
 })
