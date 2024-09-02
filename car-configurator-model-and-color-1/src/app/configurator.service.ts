@@ -17,6 +17,19 @@ export class ConfiguratorService {
   readonly currentColor = signal<Color | undefined>(undefined);
 
   readonly selectableColors = computed(() => this.currentCar()?.colors);
+  readonly currentImage = computed(
+      () => {
+        const car = this.currentCar();
+        const color = this.currentColor();
+
+        if (car && color) {
+          return `https://interstate21.com/tesla-app/images/${car.code}/${color.code}.jpg`
+        }
+        else {
+          return null;
+        }
+      }
+  );
 
   selectModel(code: CarModel["code"]) {
     const model = this.allModels().find(model => model.code === code);

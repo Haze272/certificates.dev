@@ -17,7 +17,7 @@ Model:
 
   @if (configuratorService.currentCar() && configuratorService.currentColor()) {
     <div>
-      <img [src]="'https://interstate21.com/tesla-app/images/' + configuratorService.currentCar()?.code + '/' + configuratorService.currentColor()?.code  + '.jpg'" />
+      <img [src]="configuratorService.currentImage()" />
     </div>
   }
 }
