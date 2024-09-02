@@ -1,0 +1,14 @@
+<div class="container">
+  <form>
+    <fieldset>
+      <legend>Filters</legend>
+      <label for="title">Title</label>
+      <input type="text" name="title"/>
+      <label for="releaseDate">Release year</label>
+      <input type="number" name="releaseDate" />
+    </fieldset>
+  </form>
+  @for(movie of movies$ | async; track movie.id) {
+    <app-movie-item [movie]="movie" appHighlight [isFavorite]="favoritesService.isFavorite(movie)()" (toggleFavorite)="favoritesService.toggleFavorite(movie)"/>
+  }
+</div>
