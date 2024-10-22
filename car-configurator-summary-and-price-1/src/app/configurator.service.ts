@@ -31,14 +31,8 @@ export class ConfiguratorService {
     }
   );
   readonly step2Ready: Signal<boolean> = computed(() => this.currentCar() != undefined && this.currentColor() != undefined);
-  readonly step3Ready: Signal<boolean> = computed(() => {
-    return (
-      this.step2Ready() &&
-      this.currentConfig() != undefined &&
-      this.currentTowHitchIsSelected() != undefined &&
-      this.currentWheelIsYoke() != undefined
-    )
-  });
+  readonly step3Ready: Signal<boolean> = computed(() => this.step2Ready() && this.currentConfig() != undefined);
+  
   readonly totalPrice: Signal<number> = computed(() => {
     return (
       this.step2Ready() && this.step3Ready() ?

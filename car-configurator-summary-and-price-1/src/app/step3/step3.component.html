@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="col-sm-6">
-      ${{ service.currentConfig()?.price }}
+      ${{ service.currentConfig()?.price | currency }}
     </div>
   </div>
 
@@ -18,7 +18,7 @@
       <b>{{ service.currentColor()?.description }}</b>
     </div>
     <div class="col-sm-6">
-      ${{ service.currentColor()?.price }}
+      ${{ service.currentColor()?.price | currency }}
     </div>
   </div>
 
@@ -28,7 +28,7 @@
         <b>Yoke Steering Wheel</b>
       </div>
       <div class="col-sm-6">
-        $1,000.00
+        {{ 1000 | currency }}
       </div>
     </div>
   }
@@ -39,7 +39,7 @@
         <b>Tow Hitch Package</b>
       </div>
       <div class="col-sm-6">
-        $1,000.00
+        {{ 1000 | currency }}
       </div>
     </div>
   }
@@ -51,7 +51,7 @@
       <b>TOTAL COST</b>
     </div>
     <div class="col-sm-6">
-      ${{ service.totalPrice() }}
+      ${{ service.totalPrice() | currency }}
     </div>
   </div>
   <hr/>
