@@ -16,5 +16,4 @@ import {CurrencyPipe} from '@angular/common';
 export class Step2Component {
 
   service = inject(ConfiguratorService);
-
 }

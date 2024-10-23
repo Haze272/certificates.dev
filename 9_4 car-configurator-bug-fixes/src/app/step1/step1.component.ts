@@ -13,4 +13,10 @@ import {ConfiguratorService} from '../configurator.service';
 })
 export class Step1Component {
   service = inject(ConfiguratorService);
+
+  changeCar(model: string) {
+    this.service.selectModel(model);
+    this.service.currentTowHitchIsSelected.set(false);
+    this.service.currentConfig.set(undefined);
+  }
 }
